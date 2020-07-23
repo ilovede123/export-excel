@@ -1,0 +1,26 @@
+{
+  "name": "qf-export-excel",
+  "version": "1.0.1",
+  "description": "可以将table中的表格数据导出为excel文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilovede123/export-excel.git"
+  },
+  "keywords": [
+    "vue",
+    "js",
+    "excel",
+    "react",
+    "uni-app"
+  ],
+  "author": "前端摸鱼欧阳锋",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilovede123/export-excel/issues"
+  },
+  "homepage": "https://github.com/ilovede123/export-excel#readme"
+}
