@@ -1,6 +1,6 @@
 {
   "name": "qf-export-excel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "可以将table中的表格数据导出为excel文件",
   "main": "index.js",
   "scripts": {

@@ -29,8 +29,6 @@ function tableToExcel(titleList = [], dataSource = [], fileName = "") {
         }
         str += '</tr>';
     }
-    var linkName;
-    var worksheet = linkName ? linkName : "sheet"//下载之后excel下标显示名称（linkName是自己定义的名称）
     var uri = 'data:application/vnd.ms-excel;base64,';
     var template = `<html xmlns:o="urn:schemas-microsoft-com:office:office" 
     xmlns:x="urn:schemas-microsoft-com:office:excel" 
@@ -43,7 +41,7 @@ function tableToExcel(titleList = [], dataSource = [], fileName = "") {
     var base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) }
     var link = document.createElement("a");
     link.href = uri + base64(template);
-    link.download = linkName ? linkName : "数据.xls";//当前下载的excel名称
+    link.download = fileName ? fileName : "数据.xls";//当前下载的excel名称
     document.body.appendChild(link);
     link.innerHTML = "点击下载"
     console.log(unescape(encodeURIComponent(template)))
