@@ -34,14 +34,14 @@ function tableToExcel(titleList = [], dataSource = [], fileName = "") {
     xmlns:x="urn:schemas-microsoft-com:office:excel" 
     xmlns="http://www.w3.org/TR/REC-html40">
     <head><meta charset="UTF-8"><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>
-      <x:Name>${worksheet}</x:Name>
+      <x:Name>${fileName}</x:Name>
       <x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>
       </x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
       </head><body><table>${str}</table></body></html>`;
     var base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) }
     var link = document.createElement("a");
     link.href = uri + base64(template);
-    link.download = fileName ? fileName : "数据.xls";//当前下载的excel名称
+    link.download = fileName ? fileName + ".xls" : "数据.xls";//当前下载的excel名称
     document.body.appendChild(link);
     link.innerHTML = "点击下载"
     console.log(unescape(encodeURIComponent(template)))
